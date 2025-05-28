@@ -1,133 +1,86 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grupo VIP da Nathy 🔥</title>
-  <meta name="description" content="Entre no grupo VIP da Nathy e veja tudo que ela só mostra para os mais íntimos.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1018778910343549');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1018778910343549&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 
-  <!-- Pixel do Facebook -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1018778910343549');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=1018778910343549&ev=PageView&noscript=1"/>
-  </noscript>
-
+  <title>🎥 Vídeo Exclusivo</title>
   <style>
+    /* seu CSS permanece igual */
     body {
-      background-color: #000;
+      font-family: Arial, sans-serif;
+      background-color: #111;
       color: #fff;
-      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
       margin: 0;
-      padding: 0;
       text-align: center;
+      padding-top: 30px;
     }
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    .logo {
-      width: 180px;
-      margin-bottom: 10px;
-    }
-    .banner {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-    .cta {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: #ff0066;
-      margin: 20px 0;
-    }
-    .video-container {
-      position: relative;
-      margin: 30px 0;
-    }
-    .blurred-video {
-      filter: blur(25px);
-      width: 100%;
-      border-radius: 10px;
-    }
-    .play-button {
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #ff0066;
-      color: white;
-      padding: 15px 25px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 0 15px #ff0066;
-      cursor: pointer;
-    }
-    .timer {
-      font-size: 2rem;
-      color: #fff;
-      font-weight: bold;
-      margin: 30px 0;
-    }
-    .button-telegram {
-      background-color: #ff0066;
-      color: white;
-      padding: 15px 25px;
-      border-radius: 50px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-      box-shadow: 0 0 15px #ff0066;
-      margin-top: 30px;
-    }
-    .button-telegram:hover {
-      opacity: 0.9;
-    }
+    /* ... resto do CSS igual ... */
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <!-- Logo e banner -->
-    <img src="logo.png" alt="Logo" class="logo" />
-    <img src="banner.jpg" alt="Banner da Nathy" class="banner" />
-
-    <!-- CTA direto -->
-    <div class="cta">
-      ⚠️ ATENÇÃO: Vídeo exclusivo e proibido abaixo ⚠️
-    </div>
-
-    <!-- Cronômetro fake (estático) -->
-    <div class="timer">⏳ Restam apenas 5 vagas!</div>
-
-    <!-- Vídeo embaçado -->
-    <div class="video-container">
-      <img src="thumb-video.jpg" alt="Vídeo embaçado" class="blurred-video" />
-      <a class="play-button" href="video.html">▶️ Ver vídeo</a>
-    </div>
-
-    <!-- Botão com evento personalizado para Telegram -->
-    <a href="https://t.me/nathysafadinhavipbot"
-       class="button-telegram"
-       onclick="fbq('trackCustom', 'CliqueBotTelegram');">
-       🔥 ME VER PELADINHA 🔥
-    </a>
+  <!-- Vídeo e Copy -->
+  <div class="video-container">
+    <video id="meuVideo" preload="auto">
+      <source src="video-previa.mp4" type="video/mp4">
+      Seu navegador não suporta o formato de vídeo.
+    </video>
+    <button class="play-button" onclick="tocarVideo()">▶️</button>
   </div>
 
+  <script>
+    const video = document.getElementById("meuVideo");
+    const playButton = document.querySelector(".play-button");
+
+    function tocarVideo() {
+      if (video.paused) {
+        video.play();
+        playButton.textContent = '⏸️';
+      } else {
+        video.pause();
+        playButton.textContent = '▶️';
+      }
+    }
+  </script>
+
+  <div class="status-local">
+    <div class="alerta-tempo-limitado">
+      😈🔥  VOCÊ QUER ME VER DE FORMA EXCLUSIVA? 😈🔥
+      <br><br>
+      <a href="https://t.me/nathysafadinhavipbot" 
+         class="telegram-btn" 
+         target="_blank" 
+         onclick="fbq('trackCustom', 'LeadTelegram')">
+        <strong>ENTRAR AGORA</strong>
+      </a>
+    </div>
+  </div>
+<!-- Botão do Instagram -->
+
+  <!-- Rodapé com todos os direitos reservados -->
+  <footer>
+    <p></p>
+  </footer>
 </body>
 </html>
