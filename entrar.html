@@ -29,24 +29,24 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: flex-start; /* Ajustado para que o conteúdo fique mais próximo do topo */
       height: 100vh;
       margin: 0;
       text-align: center;
-      padding-top: 30px;
+      padding-top: 30px; /* Espaço superior */
     }
 
     /* Container do vídeo com proporção 9:16 */
     .video-container {
-      width: 80%;
+      width: 80%; /* Ajuste para o vídeo não ficar muito grande */
       max-width: 480px;
       height: 0;
-      padding-bottom: 127.77%;
+      padding-bottom: 127.77%; /* Proporção 9:16 */
       position: relative;
       overflow: hidden;
       border-radius: 12px;
       box-shadow: 0 0 12px rgba(255, 0, 119, 0.6);
-      margin-bottom: 20px;
+      margin-bottom: 20px; /* Menos espaço entre o vídeo e o texto */
     }
 
     video {
@@ -95,11 +95,11 @@
       margin-top: 20px;
       font-size: 18px;
       padding: 20px;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.7); /* Fundo transparente com borda */
       border-radius: 12px;
       width: 80%;
       max-width: 480px;
-      margin-bottom: 20px;
+      margin-bottom: 20px; /* Adicionando espaço abaixo do quiz */
     }
 
     .quiz-container p {
@@ -117,7 +117,7 @@
       font-size: 16px;
       transition: background-color 0.3s;
       width: 100%;
-      margin-top: 10px;
+      margin-top: 10px; /* Mais próximo do texto */
     }
 
     .quiz-button:hover {
@@ -287,3 +287,116 @@
     }
 
     .alerta-tempo-limitado {
+      margin: 20px auto;
+      padding: 14px;
+      font-size: 15px;
+      color: #fff;
+      max-width: 90%;
+      text-align: center;
+      border-radius: 12px;
+      position: relative;
+      background-color: #111;
+      font-weight: bold;
+      box-shadow: 0 0 12px rgba(255, 0, 128, 0.3);
+    }
+
+    .alerta-tempo-limitado::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      z-index: -1;
+      background: linear-gradient(45deg, #ff0077, #ff6a00, #ff0077, #ff6a00);
+      background-size: 400% 400%;
+      animation: borda-girando 6s linear infinite;
+      border-radius: 14px;
+    }
+
+    @keyframes borda-girando {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 20px;
+      }
+
+      .cronometro-novo {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      .carousel img {
+        height: 300px;
+      }
+
+      .profile-pic {
+        width: 130px;
+        height: 130px;
+        margin-top: -50px;
+      }
+
+      .banner {
+        height: 180px;
+      }
+
+      .content {
+        padding: 12px;
+      }
+
+      .telegram-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+
+      .alerta-tempo-limitado {
+        font-size: 16px;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Vídeo e Copy -->
+  <div class="video-container">
+    <video id="meuVideo" preload="auto">
+      <source src="video-previa.mp4" type="video/mp4">
+      Seu navegador não suporta o formato de vídeo.
+    </video>
+    <button class="play-button" onclick="tocarVideo()">▶️</button>
+  </div>
+
+  <script>
+    const video = document.getElementById("meuVideo");
+    const playButton = document.querySelector(".play-button");
+
+    function tocarVideo() {
+      if (video.paused) {
+        video.play();
+        playButton.textContent = '⏸️';
+      } else {
+        video.pause();
+        playButton.textContent = '▶️';
+      }
+    }
+  </script>
+
+  <div class="status-local">
+    <div class="alerta-tempo-limitado">
+      😈🔥  VOCÊ QUER ME VER DE FORMA EXCLUSIVA? 😈🔥
+      <br><br>
+      <a href="https://t.me/nathysafadinhavipbot" class="telegram-btn" target="_blank"><strong>ENTRAR AGORA</strong></a>
+    </div>
+  </div>
+<!-- Botão do Instagram -->
+
+  <!-- Rodapé com todos os direitos reservados -->
+  <footer>
+    <p></p>
+  </footer>
+</body>
+</html>
