@@ -1,402 +1,133 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1018778910343549');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1018778910343549&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupo VIP da Nathy 🔥</title>
+  <meta name="description" content="Entre no grupo VIP da Nathy e veja tudo que ela só mostra para os mais íntimos.">
 
-  <title>🎥 Vídeo Exclusivo</title>
+  <!-- Pixel do Facebook -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1018778910343549');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1018778910343549&ev=PageView&noscript=1"/>
+  </noscript>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
+      background-color: #000;
       color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start; /* Ajustado para que o conteúdo fique mais próximo do topo */
-      height: 100vh;
+      font-family: 'Arial', sans-serif;
       margin: 0;
+      padding: 0;
       text-align: center;
-      padding-top: 30px; /* Espaço superior */
     }
-
-    /* Container do vídeo com proporção 9:16 */
-    .video-container {
-      width: 80%; /* Ajuste para o vídeo não ficar muito grande */
-      max-width: 480px;
-      height: 0;
-      padding-bottom: 127.77%; /* Proporção 9:16 */
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(255, 0, 119, 0.6);
-      margin-bottom: 20px; /* Menos espaço entre o vídeo e o texto */
-    }
-
-    video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .copy {
-      font-size: 18px;
-      line-height: 1.4;
-      font-weight: bold;
-      margin: 10px 20px;
-    }
-
-    /* Estilo do botão de Play */
-    .play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(255, 0, 119, 0.7);
-      color: white;
-      border: none;
-      font-size: 50px;
-      border-radius: 50%;
-      width: 80px;
-      height: 80px;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 0 10px rgba(255, 0, 119, 0.5);
-      transition: background-color 0.3s;
-    }
-
-    .play-button:hover {
-      background-color: rgba(255, 0, 119, 0.9);
-    }
-
-    /* Container do Quiz ajustado */
-    .quiz-container {
-      margin-top: 20px;
-      font-size: 18px;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.7); /* Fundo transparente com borda */
-      border-radius: 12px;
-      width: 80%;
-      max-width: 480px;
-      margin-bottom: 20px; /* Adicionando espaço abaixo do quiz */
-    }
-
-    .quiz-container p {
-      margin-bottom: 15px;
-      font-size: 18px;
-    }
-
-    .quiz-button {
-      background-color: #ff0077;
-      color: white;
-      padding: 12px 30px;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s;
-      width: 100%;
-      margin-top: 10px; /* Mais próximo do texto */
-    }
-
-    .quiz-button:hover {
-      background-color: #e6006a;
-    }
-
-    /* Resultado */
-    .result-container {
-      margin-top: 20px;
-      font-size: 18px;
-      font-weight: bold;
-      color: #34b7f1;
-    }
-
-    .status-local {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 15px;
-      color: #ccc;
-      margin-top: 10px;
-      justify-content: center;
-      animation: fadeIn 1s ease;
-    }
-
-     .banner {
-      width: 100%;
-      height: 240px;
-      background: url('BANNER.jpg') no-repeat center center;
-      background-size: cover;
-    }
-
-    .profile-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 4px solid #ff0077;
-      margin-top: -60px;
-      background: url('PERFIL.jpg') no-repeat center center;
-      background-size: cover;
-    }
-
-    .content {
-      text-align: center;
-      padding: 16px;
+    .container {
       max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .logo {
+      width: 180px;
+      margin-bottom: 10px;
+    }
+    .banner {
       width: 100%;
-    }
-
-    h1 {
-      font-size: 22px;
-      color: #ff0077;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.4;
+      border-radius: 10px;
       margin-bottom: 20px;
     }
-
-    .telegram-btn {
-      background-color: #0088cc;
-      color: #fff;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 30px;
-      font-size: 15px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.3s;
-      display: inline-block;
-    }
-
-    .telegram-btn:hover {
-      background-color: #0077b3;
-    }
-
-    footer {
-      margin-top: 30px;
-      font-size: 13px;
-      color: #888;
-      text-align: center;
-      padding: 10px;
-    }
-
-    .status-local {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 15px;
-      color: #ccc;
-      margin-top: 10px;
-      justify-content: center;
-      animation: fadeIn 1s ease;
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      background-color: #00ff6e;
-      border-radius: 50%;
-      animation: blink 1s infinite;
-      box-shadow: 0 0 8px #00ff6e;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.2; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .carousel-container {
-      width: 100%;
-      padding: 0 10px;
-      margin-bottom: 24px;
-    }
-
-    .carousel {
-      display: flex;
-      overflow-x: auto;
-      gap: 12px;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      padding-bottom: 10px;
-    }
-
-    .carousel::-webkit-scrollbar {
-      display: none;
-    }
-
-    .carousel img {
-      height: 240px;
-      width: auto;
-      border-radius: 16px;
-      object-fit: cover;
-      flex-shrink: 0;
-      border: 4px solid #ff0077;
-      transition: transform 0.3s ease;
-    }
-
-    .carousel img:hover {
-      transform: scale(1.05);
-    }
-
-    .cronometro-novo {
-      font-size: 16px;
-      color: #fff;
-      background-color: #ff0077;
-      padding: 10px 16px;
-      border-radius: 10px;
-      text-align: center;
-      max-width: 260px;
-      margin: 20px auto;
+    .cta {
+      font-size: 1.8rem;
       font-weight: bold;
-      box-shadow: 0 0 12px rgba(255, 0, 119, 0.4);
-      animation: pulse 2s infinite;
+      color: #ff0066;
+      margin: 20px 0;
     }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 12px rgba(255, 0, 119, 0.4); }
-      50% { box-shadow: 0 0 20px rgba(255, 0, 119, 0.8); }
-      100% { box-shadow: 0 0 12px rgba(255, 0, 119, 0.4); }
-    }
-
-    .alerta-tempo-limitado {
-      margin: 20px auto;
-      padding: 14px;
-      font-size: 15px;
-      color: #fff;
-      max-width: 90%;
-      text-align: center;
-      border-radius: 12px;
+    .video-container {
       position: relative;
-      background-color: #111;
-      font-weight: bold;
-      box-shadow: 0 0 12px rgba(255, 0, 128, 0.3);
+      margin: 30px 0;
     }
-
-    .alerta-tempo-limitado::before {
-      content: '';
+    .blurred-video {
+      filter: blur(25px);
+      width: 100%;
+      border-radius: 10px;
+    }
+    .play-button {
       position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      z-index: -1;
-      background: linear-gradient(45deg, #ff0077, #ff6a00, #ff0077, #ff6a00);
-      background-size: 400% 400%;
-      animation: borda-girando 6s linear infinite;
-      border-radius: 14px;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ff0066;
+      color: white;
+      padding: 15px 25px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 0 15px #ff0066;
+      cursor: pointer;
     }
-
-    @keyframes borda-girando {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    .timer {
+      font-size: 2rem;
+      color: #fff;
+      font-weight: bold;
+      margin: 30px 0;
     }
-
-    @media (max-width: 500px) {
-      h1 {
-        font-size: 20px;
-      }
-
-      .cronometro-novo {
-        font-size: 14px;
-        padding: 10px;
-      }
-
-      .carousel img {
-        height: 300px;
-      }
-
-      .profile-pic {
-        width: 130px;
-        height: 130px;
-        margin-top: -50px;
-      }
-
-      .banner {
-        height: 180px;
-      }
-
-      .content {
-        padding: 12px;
-      }
-
-      .telegram-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-      }
-
-      .alerta-tempo-limitado {
-        font-size: 16px;
-        padding: 12px;
-      }
+    .button-telegram {
+      background-color: #ff0066;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 0 15px #ff0066;
+      margin-top: 30px;
+    }
+    .button-telegram:hover {
+      opacity: 0.9;
     }
   </style>
 </head>
 <body>
-  <!-- Vídeo e Copy -->
-  <div class="video-container">
-    <video id="meuVideo" preload="auto">
-      <source src="video-previa.mp4" type="video/mp4">
-      Seu navegador não suporta o formato de vídeo.
-    </video>
-    <button class="play-button" onclick="tocarVideo()">▶️</button>
-  </div>
 
-  <script>
-    const video = document.getElementById("meuVideo");
-    const playButton = document.querySelector(".play-button");
+  <div class="container">
+    <!-- Logo e banner -->
+    <img src="logo.png" alt="Logo" class="logo" />
+    <img src="banner.jpg" alt="Banner da Nathy" class="banner" />
 
-    function tocarVideo() {
-      if (video.paused) {
-        video.play();
-        playButton.textContent = '⏸️';
-      } else {
-        video.pause();
-        playButton.textContent = '▶️';
-      }
-    }
-  </script>
-
-  <div class="status-local">
-    <div class="alerta-tempo-limitado">
-      😈🔥  VOCÊ QUER ME VER DE FORMA EXCLUSIVA? 😈🔥
-      <br><br>
-      <a href="https://t.me/nathysafadinhavipbot" class="telegram-btn" target="_blank"><strong>ENTRAR AGORA</strong></a>
+    <!-- CTA direto -->
+    <div class="cta">
+      ⚠️ ATENÇÃO: Vídeo exclusivo e proibido abaixo ⚠️
     </div>
-  </div>
-<!-- Botão do Instagram -->
 
-  <!-- Rodapé com todos os direitos reservados -->
-  <footer>
-    <p></p>
-  </footer>
+    <!-- Cronômetro fake (estático) -->
+    <div class="timer">⏳ Restam apenas 5 vagas!</div>
+
+    <!-- Vídeo embaçado -->
+    <div class="video-container">
+      <img src="thumb-video.jpg" alt="Vídeo embaçado" class="blurred-video" />
+      <a class="play-button" href="video.html">▶️ Ver vídeo</a>
+    </div>
+
+    <!-- Botão com evento personalizado para Telegram -->
+    <a href="https://t.me/nathysafadinhavipbot"
+       class="button-telegram"
+       onclick="fbq('trackCustom', 'CliqueBotTelegram');">
+       🔥 ME VER PELADINHA 🔥
+    </a>
+  </div>
+
 </body>
 </html>
