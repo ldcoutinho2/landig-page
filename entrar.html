@@ -22,7 +22,6 @@
 
   <title>🎥 Vídeo Exclusivo</title>
   <style>
-    /* seu CSS permanece igual */
     body {
       font-family: Arial, sans-serif;
       background-color: #111;
@@ -36,51 +35,255 @@
       text-align: center;
       padding-top: 30px;
     }
-    /* ... resto do CSS igual ... */
-  </style>
-</head>
-<body>
-  <!-- Vídeo e Copy -->
-  <div class="video-container">
-    <video id="meuVideo" preload="auto">
-      <source src="video-previa.mp4" type="video/mp4">
-      Seu navegador não suporta o formato de vídeo.
-    </video>
-    <button class="play-button" onclick="tocarVideo()">▶️</button>
-  </div>
 
-  <script>
-    const video = document.getElementById("meuVideo");
-    const playButton = document.querySelector(".play-button");
-
-    function tocarVideo() {
-      if (video.paused) {
-        video.play();
-        playButton.textContent = '⏸️';
-      } else {
-        video.pause();
-        playButton.textContent = '▶️';
-      }
+    /* Container do vídeo com proporção 9:16 */
+    .video-container {
+      width: 80%;
+      max-width: 480px;
+      height: 0;
+      padding-bottom: 127.77%;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(255, 0, 119, 0.6);
+      margin-bottom: 20px;
     }
-  </script>
 
-  <div class="status-local">
-    <div class="alerta-tempo-limitado">
-      😈🔥  VOCÊ QUER ME VER DE FORMA EXCLUSIVA? 😈🔥
-      <br><br>
-      <a href="https://t.me/nathysafadinhavipbot" 
-         class="telegram-btn" 
-         target="_blank" 
-         onclick="fbq('trackCustom', 'LeadTelegram')">
-        <strong>ENTRAR AGORA</strong>
-      </a>
-    </div>
-  </div>
-<!-- Botão do Instagram -->
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-  <!-- Rodapé com todos os direitos reservados -->
-  <footer>
-    <p></p>
-  </footer>
-</body>
-</html>
+    .copy {
+      font-size: 18px;
+      line-height: 1.4;
+      font-weight: bold;
+      margin: 10px 20px;
+    }
+
+    /* Estilo do botão de Play */
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 0, 119, 0.7);
+      color: white;
+      border: none;
+      font-size: 50px;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(255, 0, 119, 0.5);
+      transition: background-color 0.3s;
+    }
+
+    .play-button:hover {
+      background-color: rgba(255, 0, 119, 0.9);
+    }
+
+    /* Container do Quiz ajustado */
+    .quiz-container {
+      margin-top: 20px;
+      font-size: 18px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 12px;
+      width: 80%;
+      max-width: 480px;
+      margin-bottom: 20px;
+    }
+
+    .quiz-container p {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .quiz-button {
+      background-color: #ff0077;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .quiz-button:hover {
+      background-color: #e6006a;
+    }
+
+    /* Resultado */
+    .result-container {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #34b7f1;
+    }
+
+    .status-local {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      color: #ccc;
+      margin-top: 10px;
+      justify-content: center;
+      animation: fadeIn 1s ease;
+    }
+
+     .banner {
+      width: 100%;
+      height: 240px;
+      background: url('BANNER.jpg') no-repeat center center;
+      background-size: cover;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #ff0077;
+      margin-top: -60px;
+      background: url('PERFIL.jpg') no-repeat center center;
+      background-size: cover;
+    }
+
+    .content {
+      text-align: center;
+      padding: 16px;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 22px;
+      color: #ff0077;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+
+    .telegram-btn {
+      background-color: #0088cc;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      font-size: 15px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
+      display: inline-block;
+    }
+
+    .telegram-btn:hover {
+      background-color: #0077b3;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #888;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .status-local {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      color: #ccc;
+      margin-top: 10px;
+      justify-content: center;
+      animation: fadeIn 1s ease;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background-color: #00ff6e;
+      border-radius: 50%;
+      animation: blink 1s infinite;
+      box-shadow: 0 0 8px #00ff6e;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .carousel-container {
+      width: 100%;
+      padding: 0 10px;
+      margin-bottom: 24px;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 12px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 10px;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel img {
+      height: 240px;
+      width: auto;
+      border-radius: 16px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 4px solid #ff0077;
+      transition: transform 0.3s ease;
+    }
+
+    .carousel img:hover {
+      transform: scale(1.05);
+    }
+
+    .cronometro-novo {
+      font-size: 16px;
+      color: #fff;
+      background-color: #ff0077;
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 260px;
+      margin: 20px auto;
+      font-weight: bold;
+      box-shadow: 0 0 12px rgba(255, 0, 119, 0.4);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 12px rgba(255, 0, 119, 0.4); }
+      50% { box-shadow: 0 0 20px rgba(255, 0, 119, 0.8); }
+      100% { box-shadow: 0 0 12px rgba(255, 0, 119, 0.4); }
+    }
+
+    .alerta-tempo-limitado {
